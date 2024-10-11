@@ -1,0 +1,44 @@
+###### ROCK PAPER SCISSORS GAME ######
+import random
+
+
+options = ("rock", "paper","scissor")
+
+player = None
+computer = random.choice(options)
+running = True
+
+while running:
+    player = None
+    computer = random.choice(options)
+    
+    
+    
+    while player not in options:
+        player = input(f"enter a choice from{options}")
+
+    print(f"player:{player}")
+    print(f"computer:{computer}")
+
+    if player == computer:
+        print(" It's a tie")
+    elif player == "rock" and computer == "scissor":
+        print("The player won the game!!!  :)")
+    elif player == "rock" and computer == "paper":
+        print("The computer won the game!!!")
+    elif player == "paper" and computer == "scissor":
+        print("The Computer won the game !!!!") 
+    elif player == "paper" and computer == "rock":
+        print("The player won the game !!! :)")
+    elif player == "scissor" and computer == "rock":
+        print("The computer won the game!!!")
+    else:
+        print("The player won the game!!!! :) ") 
+    
+    play_again = input("play again? (y/n):").lower()
+    if play_again == 'y':
+        running = True
+    else:
+        print("<<<<<<<Thanks for playing>>>>>>>")
+        break
+        
